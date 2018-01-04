@@ -1,0 +1,63 @@
+/*
+ ============================================================================
+ Name        : Ur.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+// globale variabler
+int sekund = 0;
+int minut = 0;
+int time = 0;
+
+int main(void) {
+
+
+
+	while(minut < 15)
+	{
+		// 1 sekund delay her
+		int c, d;
+
+		   for ( c = 1 ; c <= 32767 ; c++ )
+		   {
+			   for ( d = 1 ; d <= 32767 ; d++ );
+
+		   }
+		//
+
+
+
+		sekund++;
+
+		if (sekund >= 59)
+		{
+			minut++;
+			sekund = 0;
+		}
+
+		if (minut >= 59)
+		{
+			time++;
+			minut = 0;
+		}
+
+		if (time >= 23)
+		{
+			time = 0;
+		}
+
+
+		printf("%d %d %d\n", time, minut, sekund);
+
+	}
+	return EXIT_SUCCESS;
+}
+
